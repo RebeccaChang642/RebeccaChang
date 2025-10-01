@@ -1,0 +1,52 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  position: relative;
+}
+
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+main {
+  min-height: calc(100vh - 120px);
+  padding-top: 80px;
+}
+
+/* 頁面轉場動畫 */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  main {
+    padding-top: 60px;
+    min-height: calc(100vh - 100px);
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 50px;
+    min-height: calc(100vh - 90px);
+  }
+}

@@ -1,0 +1,271 @@
+.project-detail {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.project-header {
+  margin-bottom: 4rem;
+}
+
+.back-link {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #ff8e8e;
+}
+
+.project-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-category {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-year {
+  background: rgba(78, 205, 196, 0.2);
+  color: #4ecdc4;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #fff 0%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.project-image {
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.2rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.info-section p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-tag {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-details {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  backdrop-filter: blur(20px);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #ccc;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-navigation {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.nav-btn:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.nav-btn.primary {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+  border-color: #ff6b6b;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+}
+
+.nav-btn.primary:hover {
+  box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+  transform: translateY(-2px);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .project-detail {
+    padding: 1rem 0;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .project-description {
+    font-size: 1.1rem;
+  }
+
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .image-placeholder {
+    height: 300px;
+  }
+
+  .project-info {
+    gap: 1.5rem;
+  }
+
+  .info-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .info-section p {
+    font-size: 1rem;
+  }
+
+  .project-navigation {
+    gap: 0.5rem;
+  }
+
+  .nav-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .image-placeholder {
+    height: 250px;
+  }
+
+  .project-details {
+    padding: 1rem;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

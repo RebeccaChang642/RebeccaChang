@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=./index.html" />
+    <script>
+      // Fallback: redirect any 404 to index.html preserving hash
+      var path = window.location.href;
+      var base = path.substring(0, path.lastIndexOf('/') + 1);
+      window.location.replace(base + 'index.html' + window.location.hash);
+    </script>
+  </head>
+  <body></body>
+  </html>
+
+
+
