@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RebeccaChang/static/css/main.ee2a772b.css",
+    "main.js": "/RebeccaChang/static/js/main.13b43477.js",
+    "index.html": "/RebeccaChang/index.html",
+    "main.ee2a772b.css.map": "/RebeccaChang/static/css/main.ee2a772b.css.map",
+    "main.13b43477.js.map": "/RebeccaChang/static/js/main.13b43477.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee2a772b.css",
+    "static/js/main.13b43477.js"
+  ]
+}
