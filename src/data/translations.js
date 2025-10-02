@@ -7,23 +7,24 @@ export const translations = {
     contact: '聯絡',
     
     // Hero Section
-    heroTitle: '創意設計師',
-    heroSubtitle: '專注於創造令人驚艷的數位體驗',
+    heroTitle: '我是 Rebecca Chang，一位 UI/UX 設計師',
+    heroSubtitle: '我熱衷於創造直觀且令人愉悅的數位體驗。',
     viewWork: '查看作品',
     contactMe: '聯絡我',
     scrollDown: '向下滾動',
     
     // About Section
     aboutTitle: '關於我',
-    aboutSubtitle: '我是一位充滿熱情的UI/UX設計師，專注於創造美觀且實用的數位體驗',
-    designPhilosophy: '設計理念',
-    aboutText1: '我相信好的設計不僅要美觀，更要解決實際問題。我專注於使用者體驗，透過深入的研究和測試，創造出既美觀又實用的設計解決方案。',
-    aboutText2: '從概念發想到最終實現，我享受整個設計過程，並持續學習最新的設計趨勢和技術。',
+    aboutSubtitle: '探索我的設計理念與專業旅程',
+    designPhilosophy: '我的設計理念',
+    aboutText1: '我是一位充滿熱情的 UI/UX 設計師，致力於將複雜的問題轉化為優雅、以用戶為中心的解決方案。我相信好的設計不僅僅是美觀，更在於其功能性、可用性與情感連結。',
+    aboutText2: '我的方法結合了深入的使用者研究、迭代原型設計和對細節的嚴謹關注，以確保每個產品都能真正滿足用戶的需求並超越他們的期望。',
     learnMore: '了解更多',
+    designerPhoto: '設計師照片',
     
     // Skills Section
-    skillsTitle: '技能專長',
-    skillsSubtitle: '持續學習和精進各種設計工具與技術',
+    skillsTitle: '我的技能',
+    skillsSubtitle: '我所掌握的工具與專業知識',
     
     // Portfolio Section
     portfolioTitle: '精選作品',
@@ -71,23 +72,24 @@ export const translations = {
     contact: 'Contact',
     
     // Hero Section
-    heroTitle: 'Creative Designer',
-    heroSubtitle: 'Focused on creating stunning digital experiences',
+    heroTitle: 'I\'m Rebecca Chang, a UI/UX Designer',
+    heroSubtitle: 'I\'m passionate about creating intuitive and delightful digital experiences.',
     viewWork: 'View Work',
     contactMe: 'Contact Me',
     scrollDown: 'Scroll Down',
     
     // About Section
     aboutTitle: 'About Me',
-    aboutSubtitle: 'I am a passionate UI/UX designer focused on creating beautiful and practical digital experiences',
-    designPhilosophy: 'Design Philosophy',
-    aboutText1: 'I believe good design should not only be beautiful, but also solve real problems. I focus on user experience, creating beautiful and practical design solutions through in-depth research and testing.',
-    aboutText2: 'From concept to final implementation, I enjoy the entire design process and continuously learn the latest design trends and technologies.',
+    aboutSubtitle: 'Explore My Design Philosophy and Professional Journey',
+    designPhilosophy: 'My Design Philosophy',
+    aboutText1: 'I am a passionate UI/UX designer dedicated to transforming complex problems into elegant, user-centered solutions. I believe good design is not just about aesthetics, but also about its functionality, usability, and emotional connection.',
+    aboutText2: 'My approach combines in-depth user research, iterative prototyping, and meticulous attention to detail to ensure every product truly meets user needs and exceeds their expectations.',
     learnMore: 'Learn More',
+    designerPhoto: 'Designer Photo',
     
     // Skills Section
-    skillsTitle: 'Skills & Expertise',
-    skillsSubtitle: 'Continuously learning and improving various design tools and technologies',
+    skillsTitle: 'My Skills',
+    skillsSubtitle: 'Tools and Expertise I Master',
     
     // Portfolio Section
     portfolioTitle: 'Featured Work',

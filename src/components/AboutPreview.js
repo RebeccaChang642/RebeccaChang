@@ -60,7 +60,7 @@ const AboutPreview = () => {
             className="about-image"
           >
             <div className="image-placeholder">
-              <span>設計師照片</span>
+              <span>{t.designerPhoto}</span>
             </div>
           </motion.div>
         </div>
