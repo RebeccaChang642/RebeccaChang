@@ -12,19 +12,20 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    // 檢查 localStorage 或系統偏好
+    // 檢查 localStorage
     const saved = localStorage.getItem('theme');
     if (saved) {
       return saved === 'dark';
     }
-    // 檢查系統偏好
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // 預設為深色模式
+    return true;
   });
 
   useEffect(() => {
-    // 監聽系統主題變化
+    // 監聽系統主題變化（僅在用戶未手動設定時）
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e) => {
+      // 只有在用戶沒有手動設定主題時才跟隨系統偏好
       if (!localStorage.getItem('theme')) {
         setIsDarkMode(e.matches);
       }
