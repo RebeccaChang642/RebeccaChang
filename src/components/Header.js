@@ -2,12 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { gsap } from 'gsap';
+import { useTheme } from '../contexts/ThemeContext';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { isDarkMode, toggleTheme } = useTheme();
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,10 +37,10 @@ const Header = () => {
   };
 
   const menuItems = [
-    { name: '首頁', path: '/' },
-    { name: '作品集', path: '/portfolio' },
-    { name: '關於我', path: '/about' },
-    { name: '聯絡', path: '/contact' }
+    { name: t.home, path: '/' },
+    { name: t.portfolio, path: '/portfolio' },
+    { name: t.about, path: '/about' },
+    { name: t.contact, path: '/contact' }
   ];
 
   return (
@@ -72,6 +78,28 @@ const Header = () => {
             </Link>
           ))}
         </nav>
+
+        <div className="header-controls">
+          <motion.button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            title={isDarkMode ? t.lightMode : t.darkMode}
+          >
+            {isDarkMode ? '☀️' : '🌙'}
+          </motion.button>
+          
+          <motion.button
+            className="language-toggle"
+            onClick={toggleLanguage}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            title={language === 'zh-TW' ? 'Switch to English' : '切換到中文'}
+          >
+            {language === 'zh-TW' ? 'EN' : '中'}
+          </motion.button>
+        </div>
 
         <motion.button
           className="menu-toggle"
