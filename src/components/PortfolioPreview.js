@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 import './PortfolioPreview.css';
 
 const PortfolioPreview = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const projects = [
     {
       id: 1,
@@ -38,7 +43,7 @@ const PortfolioPreview = () => {
           viewport={{ once: true }}
           className="section-title"
         >
-          精選作品
+          {t.portfolioTitle}
         </motion.h2>
         
         <motion.p
@@ -48,7 +53,7 @@ const PortfolioPreview = () => {
           viewport={{ once: true }}
           className="section-subtitle"
         >
-          探索我的設計作品，每個專案都展現不同的創意和技術
+          {t.portfolioSubtitle}
         </motion.p>
 
         <div className="projects-grid">
@@ -67,7 +72,7 @@ const PortfolioPreview = () => {
                 </div>
                 <div className="project-overlay">
                   <Link to={`/portfolio/${project.id}`} className="view-project">
-                    查看專案
+                    {t.viewProject}
                   </Link>
                 </div>
               </div>
@@ -88,7 +93,7 @@ const PortfolioPreview = () => {
           className="view-all-projects"
         >
           <Link to="/portfolio" className="btn-primary">
-            查看所有作品
+            {t.viewAllProjects}
           </Link>
         </motion.div>
       </div>

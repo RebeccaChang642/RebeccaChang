@@ -1,8 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 import './Skills.css';
 
 const Skills = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const skills = [
     { name: 'UI/UX Design', level: 90, color: '#ff6b6b' },
     { name: 'Figma', level: 95, color: '#4ecdc4' },
@@ -22,7 +27,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="section-title"
         >
-          技能專長
+          {t.skillsTitle}
         </motion.h2>
         
         <motion.p
@@ -32,7 +37,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="section-subtitle"
         >
-          持續學習和精進各種設計工具與技術
+          {t.skillsSubtitle}
         </motion.p>
 
         <div className="skills-grid">

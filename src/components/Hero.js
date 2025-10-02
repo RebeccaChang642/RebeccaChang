@@ -3,11 +3,15 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sphere } from '@react-three/drei';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 import './Hero.css';
 
 const Hero = () => {
   const heroRef = useRef(null);
   const textRef = useRef(null);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   useEffect(() => {
     // GSAP 動畫
@@ -66,7 +70,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="hero-title"
           >
-            創意設計師
+            {t.heroTitle}
           </motion.h1>
           
           <motion.p
@@ -75,7 +79,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.4 }}
             className="hero-subtitle"
           >
-            專注於創造令人驚艷的數位體驗
+            {t.heroSubtitle}
           </motion.p>
           
           <motion.div
@@ -89,14 +93,14 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
             >
-              查看作品
+              {t.viewWork}
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn-secondary"
             >
-              聯絡我
+              {t.contactMe}
             </motion.button>
           </motion.div>
         </div>
@@ -109,7 +113,7 @@ const Hero = () => {
         >
           <div className="scroll-indicator">
             <div className="scroll-line"></div>
-            <span>向下滾動</span>
+            <span>{t.scrollDown}</span>
           </div>
         </motion.div>
       </div>

@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 import './Footer.css';
 
 const Footer = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   useEffect(() => {
     // GSAP 動畫
     gsap.fromTo('.footer', 
@@ -22,13 +27,13 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>聯絡資訊</h3>
+            <h3>{t.contactInfo}</h3>
             <p>email@example.com</p>
             <p>+886 912 345 678</p>
           </div>
           
           <div className="footer-section">
-            <h3>社群媒體</h3>
+            <h3>{t.socialMedia}</h3>
             <div className="social-links">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                 <motion.span
@@ -58,18 +63,18 @@ const Footer = () => {
           </div>
           
           <div className="footer-section">
-            <h3>快速連結</h3>
+            <h3>{t.quickLinks}</h3>
             <div className="quick-links">
-              <a href="/portfolio">作品集</a>
-              <a href="/about">關於我</a>
-              <a href="/contact">聯絡</a>
+              <a href="/portfolio">{t.portfolio}</a>
+              <a href="/about">{t.about}</a>
+              <a href="/contact">{t.contact}</a>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 UI/UX Designer Portfolio. All rights reserved.</p>
-          <p>Made with ❤️ using React, Three.js & GSAP</p>
+          <p>&copy; 2024 UI/UX Designer Portfolio. {t.allRightsReserved}</p>
+          <p>{t.madeWith}</p>
         </div>
       </div>
     </motion.footer>

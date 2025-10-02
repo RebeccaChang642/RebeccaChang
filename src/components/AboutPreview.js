@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 import './AboutPreview.css';
 
 const AboutPreview = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="about-preview">
       <div className="container">
@@ -14,7 +19,7 @@ const AboutPreview = () => {
           viewport={{ once: true }}
           className="section-title"
         >
-          關於我
+          {t.aboutTitle}
         </motion.h2>
         
         <motion.p
@@ -24,7 +29,7 @@ const AboutPreview = () => {
           viewport={{ once: true }}
           className="section-subtitle"
         >
-          我是一位充滿熱情的UI/UX設計師，專注於創造美觀且實用的數位體驗
+          {t.aboutSubtitle}
         </motion.p>
 
         <div className="about-content">
@@ -35,16 +40,15 @@ const AboutPreview = () => {
             viewport={{ once: true }}
             className="about-text"
           >
-            <h3>設計理念</h3>
+            <h3>{t.designPhilosophy}</h3>
             <p>
-              我相信好的設計不僅要美觀，更要解決實際問題。我專注於使用者體驗，
-              透過深入的研究和測試，創造出既美觀又實用的設計解決方案。
+              {t.aboutText1}
             </p>
             <p>
-              從概念發想到最終實現，我享受整個設計過程，並持續學習最新的設計趨勢和技術。
+              {t.aboutText2}
             </p>
             <Link to="/about" className="learn-more-btn">
-              了解更多 →
+              {t.learnMore} →
             </Link>
           </motion.div>
 
