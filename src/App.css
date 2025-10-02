@@ -21,19 +21,19 @@
 /* Light Theme */
 :root.light {
   --bg-primary: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  --bg-secondary: rgba(255, 255, 255, 0.8);
-  --bg-tertiary: rgba(255, 255, 255, 0.05);
-  --text-primary: #1a1a1a;
-  --text-secondary: #666666;
-  --text-muted: #999999;
+  --bg-secondary: rgba(255, 255, 255, 0.9);
+  --bg-tertiary: rgba(0, 0, 0, 0.02);
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-muted: #666666;
   --accent-primary: #ff6b6b;
   --accent-secondary: #4ecdc4;
-  --border-color: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(0, 0, 0, 0.15);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --bg-gradient: 
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.05) 0%, transparent 50%);
 }
 
 /* Dark Theme */
